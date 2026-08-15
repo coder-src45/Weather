@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weather App</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <canvas id="bg-canvas"></canvas>
+  <main class="app">
+    <div class="search-row">
+      <form id="search-form" class="search">
+        <input type="text" id="city-input" placeholder="Enter a city..." autocomplete="off" />
+        <button type="submit">Search</button>
+      </form>
+      <button id="unit-toggle" class="unit-toggle">°F</button>
+    </div>
+
+    <p id="error" class="error hidden"></p>
+
+    <section id="current" class="current hidden">
+      <div class="current-top">
+        <h1 id="city-name"></h1>
+        <p id="date"></p>
+      </div>
+      <div class="current-main">
+        <img id="weather-icon" alt="weather icon" />
+        <div>
+          <p id="temperature"></p>
+          <p id="description"></p>
+        </div>
+      </div>
+      <div class="current-details">
+        <div class="detail">
+          <span>Feels like</span>
+          <strong id="feels-like"></strong>
+        </div>
+        <div class="detail">
+          <span>Humidity</span>
+          <strong id="humidity"></strong>
+        </div>
+        <div class="detail">
+          <span>Wind</span>
+          <strong id="wind"></strong>
+        </div>
+        <div class="detail">
+          <span>Pressure</span>
+          <strong id="pressure"></strong>
+        </div>
+        <div class="detail">
+          <span>UV Index</span>
+          <strong id="uv"></strong>
+        </div>
+      </div>
+    </section>
+
+    <section id="forecast" class="forecast hidden">
+      <h2>5-Day Forecast</h2>
+      <div id="forecast-list" class="forecast-list"></div>
+    </section>
+  </main>
+
+  <script src="effects.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
