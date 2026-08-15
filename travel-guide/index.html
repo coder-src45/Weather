@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Travel Weather Guide</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app">
+    <header class="header">
+      <h1>Travel Weather Guide</h1>
+      <p>Enter your candidate destinations and we'll tell you where the weather is great — and where to avoid.</p>
+    </header>
+
+    <section class="planner">
+      <div class="add-row">
+        <input type="text" id="city-input" placeholder="Add a destination, e.g. Tokyo" autocomplete="off" />
+        <button id="add-btn">Add</button>
+      </div>
+      <div id="chips" class="chips"></div>
+      <button id="check-btn" class="check-btn">Check Weather</button>
+      <p id="error" class="error hidden"></p>
+    </section>
+
+    <section id="loading" class="loading hidden">Checking destinations...</section>
+
+    <section id="results" class="results hidden">
+      <h2 id="good-title" class="section-title good-title hidden">Nice Weather — Go Here</h2>
+      <div id="good-list" class="grid"></div>
+      <h2 id="bad-title" class="section-title bad-title hidden">Bad Weather — Avoid</h2>
+      <div id="bad-list" class="grid"></div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
